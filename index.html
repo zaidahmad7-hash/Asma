@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Asmāʾ">
+<meta name="theme-color" content="#000000">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" href="icon-192.png">
+<title>Al-Asmāʾ al-Ḥusnā</title>
+<style>
+  @font-face { font-family:"AmiriAllah"; font-weight:700; src:url(data:font/ttf;base64,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AAAAAP4AADIAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAH//wAPAAEAAAAMAAAAAAAAAAIAAwABAAMAAQAWABgAAQAmAD8AAQAAAAEAAAAKABwAHgABREZMVAAIAAQAAAAA//8AAAAAAAAAAQAAAAoAMgB+AANERkxUABRhcmFiABRsYXRuABQABAAAAAD//wAFAAAAAQACAAMABAAFY2FsdAAgZmluYQAwaW5pdAA2bWVkaQA8c3MwNgBCAAAABgAHAAgACQAOABUAFgAAAAEAAgAAAAEAAAAAAAEAAQAGAAEACwAAAQIAFwAwAEoAbACWAKQAsgDAANYBZAGIAagBvAHQAeQB/gIYAjoCYAJ2AoQCngK4AyIAAgAIAAEACAABACQAAgAKAA4AAQArAAEAKAACAAgAAQAIAAEACgACABIAFgABAAIAAgADAAEALAABACkAAgAIAAEACAABAAwAAwAWABoAHgABAAMAAQACAAMAAQAmAAEAKgABACcAAQAAAAEACAABAkb/8QABAAAAAQAIAAECkv/rAAEAAAABAAgAAQKc/+sAAQAAAAEACAABAAYACwABAAIAKwAsAAYACAAEAA4AKABCAHQAAwABABIAAgJaAnIAAQIAAAAAAQACAAEAJgADAAEANgACAkACWAABAeYAAgAAAAYAAQAGAAMAAQAcAAMALAImAj4AAQHMAAIAAQAGAAIABgABAAYAAQACAAMAJgAnACoAAQABAAEAAwAAAAMBtgH0AgwAAQGaAAIAAQAGAAIABgAGAAAAAQAIAAMAAAADAdIB6gF4AAAAAwAAAAQAAQAFAAIAAwAGAAAAAQAIAAMAAAABACYAAQASAAEAAAAKAAEAAQAYAAEAAAABAAgAAQAGACkAAQABABcABQAAAAEACAADAAEAAQAaAAAADAABAAAAAQAIAAEABv/XAAEAAQBAAAEAAAABAAgAAgAKAAIAMgAxAAEAAgAmACwABQAIAAEACAADAAIAAgFQAPoAAAANAAEADQABAAAAAQAIAAIADgAEADUAMwA0AD4AAQAEACcAKwAsADcAAQAAAAEACAACABAABQA5ADYANwA4AD4AAQAFACoAKwAsADEANAABAAAAAQAIAAIA9AAEAD0APAA7AD8AAQAAAAEACAABANgADgABAAAAAQAIAAIACgACAC4ALQABAAIAJgArAAEAAAABAAgAAgAKAAIAMAAvAAEAAgApACsABgAIAAMADAAyAE4AAwAAAAIAFgAgAAAAAgAAAA8AAQAPAAEAAwArACwANwABAAEAJwADAAAAAgBUABYAAAACAAAAEwABABMAAQABACYAAwAAAAIAOAAWAAAAAgAAABQAAQAUAAEAAQApAAUACAACAAoAIgADAAIAAgASADAAAAAQAAEAEAABAAEAKwADAAIAAgASABgAAAASAAEAEQABAAEALAABAAQAKgAsADEANAAA) format("truetype"); }
+  :root { --orange:#f07a3a; --red:#e3312b; --gold:#EBD29B; --gold-hi:#F8E9C4; --gold-lo:#CDA86A; }
+  .goldtext { background:linear-gradient(180deg, var(--gold-hi) 0%, var(--gold) 50%, var(--gold-lo) 100%); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  html,body { margin:0; height:100%; background:#000; overscroll-behavior:none; position:fixed; inset:0; }
+  body { touch-action:manipulation; cursor:pointer;
+    color:var(--gold); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:radial-gradient(ellipse at 50% 42%, #1b1b1b 0%, #0b0b0b 55%, #000 100%);
+    display:flex; justify-content:center; overflow:hidden; user-select:none; -webkit-user-select:none;
+  }
+  .app { width:100%; max-width:560px; height:100%; display:flex; flex-direction:column; align-items:center;
+         padding:max(28px, env(safe-area-inset-top)) 16px max(20px, env(safe-area-inset-bottom)); }
+  h1 { margin:0 0 4vh; font-weight:800; letter-spacing:.12em; font-size:clamp(24px,7vw,36px); padding-left:.12em; white-space:nowrap; }
+  .stress { width:min(78%, 400px); margin-bottom:3vh; }
+  .stress-head { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:10px; }
+  .stress-label { letter-spacing:.32em; font-weight:700; font-size:clamp(12px,3.3vw,16px); color:var(--gold); }
+  .stress-val { color:var(--orange); font-weight:800; font-size:clamp(16px,4.4vw,22px); font-variant-numeric:tabular-nums; }
+  .bar { position:relative; height:clamp(28px,7vw,38px); border:2px solid #3a3a3a; border-radius:9px; padding:3px; background:#0c0c0c; }
+  .bar::after { content:""; position:absolute; right:-9px; top:50%; transform:translateY(-50%); width:5px; height:38%; background:#3a3a3a; border-radius:0 2px 2px 0; }
+  .fill { height:100%; border-radius:5px; transition:width .5s ease;
+          background:repeating-linear-gradient(90deg, var(--orange) 0 calc(10% - 3px), #2a1408 calc(10% - 3px) 10%);
+          background-size:var(--seg) 100%;
+          box-shadow:0 0 14px rgba(240,122,58,.45); }
+
+  .dial-wrap { width:min(94vw, 52vh, 540px); aspect-ratio:1; position:relative; flex-shrink:0; }
+  svg { width:100%; height:100%; display:block; overflow:visible; }
+  .nm { font-size:15.5px; fill:#EBD29B; dominant-baseline:central; transition:fill-opacity .3s, font-size .2s; }
+  .nm.lg { font-size:12.5px; }
+  .nm.lg.on { font-size:14px; }
+  .nm.on { font-weight:700; font-size:19px; fill:#F8E9C4; fill-opacity:1 !important; filter:url(#glow); }
+  #needle { transform-origin:500px 500px; transform-box:view-box;
+            transition:transform .22s cubic-bezier(.3,1.9,.55,1); }
+  #allah { font-weight:700; transform-origin:500px 500px; transform-box:view-box; transition:transform .35s ease, opacity .35s; opacity:.92; }
+  #allah.pulse { transform:scale(1.05); opacity:1; transition:transform .06s, opacity .06s; }
+  #core { cursor:pointer; }
+  .core-ring { transition:stroke .4s; }
+  .core-ring { animation:breathe 2.4s ease-in-out infinite; }
+  @keyframes breathe { 50% { stroke:#555; } }
+
+  .name { font-family:Georgia,"Times New Roman","Noto Serif",serif; font-size:clamp(46px,14vw,78px);
+          line-height:1.1; text-align:center; transition:opacity .18s; }
+  .name.fade, .meaning.fade { opacity:.25; }
+  .name.long { font-size:clamp(30px,8.5vw,50px); }
+  .count { margin-top:auto; color:#8a7853; font-size:12px; letter-spacing:.2em; font-variant-numeric:tabular-nums; margin-bottom:6px; }
+  .meaning { margin-top:6px; max-width:92%; min-height:2.6em; color:var(--gold); font-family:Georgia,"Times New Roman",serif; font-style:italic; font-size:clamp(16px,4.6vw,22px); text-align:center; transition:opacity .18s; }
+  .sub { margin:2.2vh 0 0; color:#BFA676; font-weight:700; letter-spacing:.06em; font-size:clamp(13px,3.7vw,18px); text-align:center; }
+  .hint { margin-top:10px; color:#7a6a4c; font-size:12px; letter-spacing:.14em; text-transform:uppercase; transition:opacity .4s; min-height:1em; }
+  .spacer { margin-bottom:auto; }
+</style>
+</head>
+<body>
+<div class="app">
+  <h1 class="goldtext">Al-Asmāʾ al-Ḥusnā</h1>
+
+  <div class="stress">
+    <div class="stress-head"><span class="stress-label">STRESS</span><span class="stress-val" id="sv">99</span></div>
+    <div class="bar"><div class="fill" id="fill"></div></div>
+  </div>
+
+  <div class="dial-wrap idle" id="wrap">
+    <svg viewBox="0 0 1000 1000" aria-label="Dial of the 99 names">
+      <defs>
+        <radialGradient id="bezel" cx="50%" cy="45%" r="55%">
+          <stop offset="0" stop-color="#151515"/><stop offset=".85" stop-color="#0d0d0d"/><stop offset="1" stop-color="#1c1c1c"/>
+        </radialGradient>
+        <radialGradient id="face" cx="50%" cy="50%" r="50%">
+          <stop offset="0" stop-color="#181818"/><stop offset="1" stop-color="#0c0c0c"/>
+        </radialGradient>
+        <radialGradient id="coreG" cx="50%" cy="40%" r="60%">
+          <stop offset="0" stop-color="#1a1a1a"/><stop offset="1" stop-color="#050505"/>
+        </radialGradient>
+        <linearGradient id="needleG" x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0" stop-color="#b3201c"/><stop offset="1" stop-color="#ff4a3d"/>
+        </linearGradient>
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="3" result="b"/><feColorMatrix in="b" type="matrix" values="0 0 0 0 0.95  0 0 0 0 0.82  0 0 0 0 0.55  0 0 0 .8 0" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#F7E7C1"/><stop offset=".55" stop-color="#E6CC93"/><stop offset="1" stop-color="#CFAF72"/>
+        </linearGradient>
+        <filter id="goldglow" x="-30%" y="-30%" width="160%" height="160%">
+          <feGaussianBlur stdDeviation="5" result="b"/>
+          <feColorMatrix in="b" type="matrix" values="0 0 0 0 0.92  0 0 0 0 0.80  0 0 0 0 0.55  0 0 0 .55 0" result="g"/>
+          <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="redglow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+
+      <!-- bezel + face -->
+      <circle cx="500" cy="500" r="496" fill="url(#bezel)" stroke="#262626" stroke-width="4"/>
+      <circle cx="500" cy="500" r="478" fill="url(#face)" stroke="#1f1f1f" stroke-width="2"/>
+      <circle cx="500" cy="500" r="200" fill="none" stroke="#161616" stroke-width="1.5"/>
+
+      <g id="ticks"></g>
+      <g id="names"></g>
+
+      <!-- centre -->
+      <g id="core">
+        <circle cx="500" cy="500" r="172" fill="#0a0a0a" stroke="#1d1d1d" stroke-width="2"/>
+        <circle class="core-ring" cx="500" cy="500" r="148" fill="url(#coreG)" stroke="#2a2a2a" stroke-width="5"/>
+
+        <text id="allah" x="500" y="508" text-anchor="middle" dominant-baseline="middle"
+              font-family="'AmiriAllah', 'Amiri', 'Scheherazade New', 'Geeza Pro', 'Traditional Arabic', serif"
+              font-size="150" fill="url(#gold)" filter="url(#goldglow)">الله</text>
+      </g>
+
+      <!-- needle -->
+      <g id="needle">
+        <circle cx="500" cy="41" r="24" fill="none" stroke="rgba(227,49,43,.18)" stroke-width="2"/>
+        <line x1="500" y1="32" x2="500" y2="50" stroke="var(--red)" stroke-width="3" filter="url(#redglow)"/>
+        <path d="M497 352 L500 205 L503 352 Z" fill="url(#needleG)" filter="url(#redglow)"/>
+        <circle cx="500" cy="357" r="11" fill="#0b0b0b" stroke="var(--red)" stroke-width="4"/>
+        <circle cx="500" cy="357" r="4" fill="var(--red)"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="count" id="count">1 / 99</div>
+  <div class="name goldtext" id="name">Ar-Raḥmān</div>
+  <div class="meaning" id="meaning">The Most Merciful, The Entirely Merciful</div>
+  <p class="sub" id="sub">Complete the dhikr. Say it in your heart.</p>
+  <div class="hint" id="hint">Tap right for next · left for previous</div>
+  <div class="spacer"></div>
+</div>
+
+<script>
+const NAMES = ["Ar-Raḥmān", "Ar-Raḥīm", "Al-Malik", "Al-Quddūs", "As-Salām", "Al-Mu’min", "Al-Muhaymin", "Al-‘Azīz", "Al-Jabbār", "Al-Mutakabbir", "Al-Khāliq", "Al-Bāriʾ", "Al-Muṣawwir", "Al-Ghaffār", "Al-Qahhār", "Al-Wahhāb", "Ar-Razzāq", "Al-Fattāḥ", "Al-ʿAlīm", "Al-Qābiḍ", "Al-Bāsiṭ", "Al-Khāfiḍ", "Ar-Rāfiʿ", "Al-Muʿizz", "Al-Mudhil", "As-Samīʿ", "Al-Baṣīr", "Al-Ḥakam", "Al-‘Adl", "Al-Laṭīf", "Al-Khabīr", "Al-Ḥalīm", "Al-ʿAẓīm", "Al-Ghafūr", "Ash-Shakūr", "Al-ʿAlī", "Al-Kabīr", "Al-Ḥafīẓ", "Al-Muqīt", "Al-Ḥasīb", "Al-Jalīl", "Al-Karīm", "Ar-Raqīb", "Al-Mujīb", "Al-Wāsiʿ", "Al-Ḥakīm", "Al-Wadūd", "Al-Majīd", "Al-Bāʿith", "As-Shahīd", "Al-Ḥaqq", "Al-Wakīl", "Al-Qawiyy", "Al-Matīn", "Al-Waliyy", "Al-Ḥamīd", "Al-Muḥṣī", "Al-Mubdiʾ", "Al-Muʿīd", "Al-Muḥyī", "Al-Mumīt", "Al-Ḥayy", "Al-Qayyūm", "Al-Wājid", "Al-Mājid", "Al-Wāḥid", "Al-Aḥad", "Aṣ-Ṣamad", "Al-Qādir", "Al-Muqtadir", "Al-Muqaddim", "Al-Muʾakhkhir", "Al-Awwal", "Al-Ākhir", "Aẓ-Ẓāhir", "Al-Bāṭin", "Al-Wālī", "Al-Mutaʿālī", "Al-Barr", "At-Tawwāb", "Al-Muntaqim", "Al-ʿAfūw", "Ar-Raʾūf", "Mālik al-Mulk", "Dhū al-Jalāli wa’l-Ikrām", "Al-Muqsiṭ", "Al-Jāmiʿ", "Al-Ghaniyy", "Al-Mughnī", "Al-Māniʿ", "Aḍ-Ḍārr", "An-Nāfiʿ", "An-Nūr", "Al-Hādī", "Al-Badīʿ", "Al-Bāqī", "Al-Wāriṯ", "Ar-Rashīd", "Aṣ-Ṣabūr"];
+const MEANINGS = ["The Most Merciful, The Entirely Merciful", "The Especially Merciful", "The King and Owner of Dominion", "The Absolutely Pure and Perfect", "The Source of Peace, The Flawless", "The Granter of Security and Faith", "The Guardian, The Witness, The Overseer", "The Almighty, The All-Powerful, The Invincible, The Honorable", "The Compeller, The Restorer", "The Supreme in Glory, The Rightfully Proud", "The Creator, The Maker", "The Originator, The Inventor", "The Fashioner, The Shaper", "The Constant Forgiver, The Great Forgiver", "The Subduer, The Ever-Dominating", "The Giver of Gifts, The Bestower", "The Ever-Providing, The Constant Provider", "The Opener, The Judge", "The All-Knowing, The Omniscient", "The Withholder, The Restrainer", "The Extender, The Expander", "The Reducer, The Abaser", "The Exalter, The Elevator", "The Honourer, The Bestower of Honor", "The Dishonourer, The Humiliator", "The All-Hearing", "The All-Seeing", "The Judge, The Giver of Justice", "The Utterly Just", "The Most Gentle, The Subtle One", "The All-Aware, The All-Acquainted", "The Most Forbearing", "The Magnificent, The Supreme", "The Forgiving, The Exceedingly Forgiving", "The Most Appreciative", "The Most High, The Exalted", "The Greatest, The Most Grand", "The Preserver, The All-Heedful and All-Protecting", "The Nourisher, The All-Powerful Maintainer", "The Reckoner", "The Majestic", "The Most Generous, The Most Noble", "The Watchful, The All-Watchful", "The Responsive, The Answerer", "The All-Encompassing, the Boundless", "The All-Wise", "The Most Loving", "The All-Glorious, The Ever-Majestic", "The Infuser of New Life, The Resurrector", "The All-Witnessing", "The Absolute Truth", "The Trustee, The Disposer of Affairs", "The All-Strong", "The Firm, The Steadfast", "The Protector, The Guardian", "The Praiseworthy, The Most Praised", "The All-Enumerating, The Counter", "The Originator, The Initiator", "The Restorer, The Reviver", "The Giver of Life", "The Taker of Life, The Causer of Death", "The Ever-Living", "The Sustainer, The Self-Subsisting", "The Ever-Wealthy, The Self-Sufficient", "The Noble, The Generous", "The One, The Indivisible", "The Unique, The Only One", "The Self-Subsisting, The One Upon Whom All Depend", "The Omnipotent, The All-Able", "The All-Powerful, The Dominant", "The Expediter, The Promoter", "The Delayer, The Postponer", "The First, The Pre-Existing", "The Last, The Ever-Remaining", "The Manifest, The Highest", "The Hidden One, Knower of the Hidden", "The Sole Governor", "The Self-Exalted", "The Source of All Goodness", "The Accepter of Repentance, The Ever-Relenting", "The Avenger", "The Pardoner", "The Most Kind", "Master of the Dominion, Owner of the Kingdom", "Possessor of Glory and Honour", "The Just One", "The Gatherer, the Uniter", "The Self-Sufficient, The Free of All Need", "The Enricher", "The Withholder", "The Creator of Harm", "The Propitious, The Benefactor", "The Light", "The Guide", "The Incomparable Originator", "The Ever-Lasting", "The Inheritor", "The Guide to the Right Path", "The Patient"];
+const N = NAMES.length, STEP = 360 / N, C = 500, R_TEXT = 432;
+const NS = "http://www.w3.org/2000/svg";
+const $ = id => document.getElementById(id);
+const el = (t, a) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); return e; };
+const pt = (r, deg) => { const a = deg * Math.PI / 180; return [C + r * Math.sin(a), C - r * Math.cos(a)]; };
+
+// ticks: 99 minor (one per name) + 12 major like a clock
+const ticks = $("ticks");
+for (let i = 0; i < N; i++) {
+  const a = i * STEP, [x1, y1] = pt(452, a), [x2, y2] = pt(466, a);
+  ticks.append(el("line", { x1, y1, x2, y2, stroke: "#4a4a4a", "stroke-width": 2 }));
+}
+for (let i = 0; i < 12; i++) {
+  const a = i * 30, [x1, y1] = pt(440, a), [x2, y2] = pt(472, a);
+  ticks.append(el("line", { x1, y1, x2, y2, stroke: "#EBD29B", "stroke-width": 5, "stroke-linecap": "round" }));
+}
+
+// names, radial, flipped on the left half so they stay readable
+const nameEls = NAMES.map((n, i) => {
+  const a = i * STEP, [x, y] = pt(R_TEXT, a), right = a < 180;
+  const t = el("text", { x, y, class: n.length > 16 ? "nm lg" : "nm", "text-anchor": right ? "end" : "start",
+    transform: `rotate(${right ? a - 90 : a + 90} ${x} ${y})` });
+  t.textContent = n;
+  $("names").append(t);
+  return t;
+});
+
+
+// ---- state ----
+let idx = 0, turns = 0, prog = 0, done = false;
+
+function render() {
+  nameEls.forEach((t, i) => {
+    let d = Math.abs(i - idx); d = Math.min(d, N - d);
+    t.classList.toggle("on", d === 0);
+    t.style.fillOpacity = d <= 5 ? (0.85 - d * 0.1).toFixed(2) : 0.3;
+  });
+  $("needle").style.transform = `rotate(${turns * STEP}deg)`;
+  const s = Math.max(0, Math.min(99, 99 - prog));
+  $("sv").textContent = s;
+  const fill = $("fill");
+  const pct = s / 99 * 100;
+  fill.style.width = pct + "%";
+  fill.style.setProperty("--seg", pct > 0 ? (10000 / pct) + "%" : "100%");
+  $("count").textContent = (idx + 1) + " / " + N;
+  const nm = $("name"), mn = $("meaning");
+  nm.classList.add("fade"); mn.classList.add("fade");
+  setTimeout(() => {
+    nm.textContent = NAMES[idx]; nm.classList.toggle("long", NAMES[idx].length > 14);
+    mn.textContent = MEANINGS[idx];
+    nm.classList.remove("fade"); mn.classList.remove("fade");
+  }, 90);
+}
+
+// ---- sound: synthesized tick-tock ----
+let ac = null, noiseBuf = null;
+function initAudio() {
+  if (ac) { if (ac.state === "suspended") ac.resume(); return; }
+  ac = new (window.AudioContext || window.webkitAudioContext)();
+  noiseBuf = ac.createBuffer(1, ac.sampleRate * 0.05, ac.sampleRate);
+  const d = noiseBuf.getChannelData(0);
+  for (let i = 0; i < d.length; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / d.length, 4);
+  const s = ac.createBufferSource(); s.buffer = ac.createBuffer(1, 1, 22050); s.connect(ac.destination); s.start(0); // iOS unlock
+}
+function tickSound(tock) {
+  if (!ac) return;
+  const t = ac.currentTime;
+  const src = ac.createBufferSource(); src.buffer = noiseBuf;
+  const bp = ac.createBiquadFilter(); bp.type = "bandpass"; bp.frequency.value = tock ? 2100 : 3200; bp.Q.value = 4;
+  const g = ac.createGain(); g.gain.setValueAtTime(0.9, t); g.gain.exponentialRampToValueAtTime(0.001, t + 0.045);
+  src.connect(bp).connect(g).connect(ac.destination); src.start(t);
+  const o = ac.createOscillator(); o.type = "sine"; o.frequency.value = tock ? 900 : 1300;
+  const og = ac.createGain(); og.gain.setValueAtTime(0.25, t); og.gain.exponentialRampToValueAtTime(0.001, t + 0.03);
+  o.connect(og).connect(ac.destination); o.start(t); o.stop(t + 0.04);
+}
+
+const SUB = "Complete the dhikr. Say it in your heart.", HINT = "Tap right for next \u00b7 left for previous";
+function step(dir) {
+  initAudio();
+  if (done && dir > 0) { prog = 0; }           // new round
+  done = false; $("sub").textContent = SUB; $("hint").textContent = HINT;
+  idx = (idx + dir + N) % N; turns += dir;
+  prog = Math.max(0, prog + dir);
+  tickSound(dir < 0 || turns % 2 === 0);
+  if (navigator.vibrate) navigator.vibrate(8);
+  const w = $("allah"); w.classList.add("pulse"); setTimeout(() => w.classList.remove("pulse"), 120);
+  if (prog >= N) {
+    done = true;
+    $("sub").textContent = "Dhikr complete. Alhamdulillah.";
+    $("hint").textContent = "Tap right to begin again";
+  }
+  render();
+}
+document.addEventListener("pointerdown", e => {
+  if (e.isPrimary === false) return;
+  step(e.clientX < window.innerWidth / 2 ? -1 : 1);
+});
+document.addEventListener("keydown", e => {
+  if (e.code === "ArrowLeft") { e.preventDefault(); step(-1); }
+  else if (["ArrowRight","Space","Enter"].includes(e.code)) { e.preventDefault(); step(1); }
+});
+
+render();
+if ("serviceWorker" in navigator) addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+document.addEventListener("gesturestart", e => e.preventDefault());
+</script>
+</body>
+</html>
